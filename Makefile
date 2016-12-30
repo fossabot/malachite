@@ -9,7 +9,7 @@ login:
 logout:
 	docker logout
 
-publish: build
+publish: login build logout
 	docker push ${IMAGE}
 
 build:
