@@ -18,4 +18,8 @@ build:
 	docker build -t ${IMAGE} .
 
 console:
-	docker run -it ${IMAGE} /bin/bash
+	docker run --name malachite -it ${IMAGE} /bin/bash
+
+clean:
+	docker rm -f malachite
+	docker rmi -f "localgod/malachite"
