@@ -4,7 +4,7 @@ IMAGE=localgod/malachite:${VERSION}
 .PHONY: build login push logout publish
 
 login:
-	docker login -u ${USER} -p ${PASS}
+	@docker login -u ${USER} -p ${PASS}
 
 logout:
 	docker logout
